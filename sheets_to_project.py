@@ -1,10 +1,12 @@
-from gql import gql, Client
-from gql.transport.requests import RequestsHTTPTransport
-import pygsheets
+"""Module providingFunction printing python version."""
+
 import json
 import sys
 import time
 import getopt
+import pygsheets
+from gql import gql, Client
+from gql.transport.requests import RequestsHTTPTransport
 
 def create_gh_proj_issues(project_id, repo_id, field_ids, client, title, type, id, priority, body=" "):
     
@@ -288,7 +290,6 @@ def sheets_to_project(token, sheet_id, gh_project_id, gh_repo_id, gh_fields):
             }
         )
             
-    print("hello")
 
 
 if __name__ == "__main__":
