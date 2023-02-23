@@ -173,42 +173,43 @@ def sheets_to_project(token, sheet_id, gh_project_id, gh_repo_id, gh_fields):
     client = Client(transport=transport)
     parsed_req = get_reqs(openvic2_req_worksheet.worksheets)
 
-    parsed_req = [{
-    "title":"The user shall be able to open the game application",
-    "type":"User Req",
-    "id":"SS-3",
-    "ac":"The user can see the application is open",
-    "dls":"UI-17, UI-13",
-    "uls":" ",
-    "priority":"M - Must Have",
-    "origin sheet":"System Specification (SS)",
-    "issue_id":" ",
-    "issue_number": 1
-    },
-    {
-    "title":"A UI panel for housing loading screen content that shall be presented when application is opened but before application is loaded",
-    "type":"Functional",
-    "id":"UI-17",
-    "ac":"The UI element for this requirement is present",
-    "dls":" ",
-    "uls":"SS-3",
-    "priority":"M - Must Have",
-    "origin sheet":"User Interface (UI)",
-    "issue_id":" ",
-    "issue_number": 2
-    },
-    {
-    "title":"A UI panel for housing main menu content that shall be presented after the game is fully loaded",
-    "type":"Functional",
-    "id":"UI-13",
-    "ac":"The UI element for this requirement is present",
-    "dls":" ",
-    "uls":"SS-3",
-    "priority":"M - Must Have",
-    "origin sheet":"User Interface (UI)",
-    "issue_id":" ",
-    "issue_number": 3
-    }]
+    # EXAMPLE
+    # parsed_req = [{
+    # "title":"The user shall be able to open the game application",
+    # "type":"User Req",
+    # "id":"SS-3",
+    # "ac":"The user can see the application is open",
+    # "dls":"UI-17, UI-13",
+    # "uls":" ",
+    # "priority":"M - Must Have",
+    # "origin sheet":"System Specification (SS)",
+    # "issue_id":" ",
+    # "issue_number": 1
+    # },
+    # {
+    # "title":"A UI panel for housing loading screen content that shall be presented when application is opened but before application is loaded",
+    # "type":"Functional",
+    # "id":"UI-17",
+    # "ac":"The UI element for this requirement is present",
+    # "dls":" ",
+    # "uls":"SS-3",
+    # "priority":"M - Must Have",
+    # "origin sheet":"User Interface (UI)",
+    # "issue_id":" ",
+    # "issue_number": 2
+    # },
+    # {
+    # "title":"A UI panel for housing main menu content that shall be presented after the game is fully loaded",
+    # "type":"Functional",
+    # "id":"UI-13",
+    # "ac":"The UI element for this requirement is present",
+    # "dls":" ",
+    # "uls":"SS-3",
+    # "priority":"M - Must Have",
+    # "origin sheet":"User Interface (UI)",
+    # "issue_id":" ",
+    # "issue_number": 3
+    # }]
 
     # Loop through all the gartherd reqs creating them 
     # and adding their created issue id to their req dict
