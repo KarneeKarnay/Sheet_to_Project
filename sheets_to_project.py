@@ -1,4 +1,3 @@
-"""Module providingFunction printing python version."""
 
 import json
 import sys
