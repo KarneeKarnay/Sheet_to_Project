@@ -104,8 +104,7 @@ def prep_body(desc=" ", ac=" ", uplinks=" ", downlinks=" "):
         downlinks_fmt ="- [ ] #" + "\n- [ ] #".join(map(str,downlinks))
     else:
         downlinks_fmt = " "
-    
-    return f"Description: {desc}\n\nAcceptance Criteria: {ac}\n\nUplinks:\n{uplinks_fmt}\n\nDownlinks:\n{downlinks_fmt}\n"
+    return f"Description: {desc}\n\nAcceptance Criteria: {ac}" + (f"\n\nUplinks:\n{uplinks_fmt}" if len(uplinks) != 0 else "") + (f"\n\nDownlinks:\n{downlinks_fmt}\n" if len(downlinks) != 0 else " ")
 
 def update_custom_gh_proj_field(project_id, client, id, field_id, value):
     update_draft_issue_mutation = gql(
